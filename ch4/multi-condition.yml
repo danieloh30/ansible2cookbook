@@ -1,0 +1,11 @@
+---
+- hosts: frontends
+  vars:
+    isadmin: true
+  tasks:
+    - name: "shut down Fedora 7 and Ubuntu 7 systems"
+      command: /sbin/shutdown -t now
+      when: (ansible_facts['distribution'] == "Fedora" and ansible_facts['distribution_major_version'] == "7") or
+            (ansible_facts['distribution'] == "Ubuntu" and ansible_facts['distribution_major_version'] == "7")
+    - shell: echo "You've logined as an adminstrator!!"
+      when: isadmin

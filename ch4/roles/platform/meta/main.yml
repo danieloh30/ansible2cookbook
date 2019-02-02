@@ -1,0 +1,8 @@
+---
+dependencies:
+- role: linuxtype
+  vars:
+     type: fedora
+- role: linuxtype
+  vars:
+     type: ubuntu

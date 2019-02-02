@@ -1,0 +1,7 @@
+---
+- hosts: frontends
+  become: yes
+  tasks:
+    - service:
+        name: start nginx service
+        state: started

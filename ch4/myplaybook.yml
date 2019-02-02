@@ -1,0 +1,19 @@
+---
+- hosts: frontends
+  remote_user: doh
+  tasks:
+    - name: test connection
+      ping:
+      remote_user: doh
+    - name: run a simple command
+      shell: /bin/ls -al
+      ignore_errors: True
+- hosts: apps
+  remote_user: doh
+  tasks:
+    - name: test connection
+      ping:
+      remote_user: doh
+    - name: run a simple command
+      shell: /bin/ls -al
+      ignore_errors: True

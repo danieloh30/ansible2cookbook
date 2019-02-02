@@ -1,0 +1,11 @@
+[frontends]
+danieloh.ansible2cookbook.com
+
+[apps]
+app01.prod.com
+
+[frontends:vars]
+proxy_server=proxy.webapp.prod.com
+health_check_retry=3
+health_check_interal=60
+

@@ -1,0 +1,4 @@
+# roles/common/tasks/centos.yml
+- yum:
+    name: "httpd"
+    state: latest

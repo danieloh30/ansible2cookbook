@@ -1,0 +1,6 @@
+---
+- hosts: frontends
+  tasks:
+    - name: "shut down Fedora 7 and Ubuntu 7 systems"
+      command: /sbin/shutdown -t now
+      when: ansible_facts['distribution'] == "Fedora"
