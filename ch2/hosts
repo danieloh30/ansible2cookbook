@@ -1,6 +1,6 @@
 [frontends]
-frt01.prod.com
-frt02.prod.com
+danieloh.ansible2cookbook.com
+app01.prod.com
 
 [apps]
 app01.prod.com

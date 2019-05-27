@@ -1,0 +1,9 @@
+---
+- hosts: frontends
+  vars:
+     contents: "{{ lookup('file', '/Users/doh/cloudnativedemo/ansible2cookbook/ch6/test.txt') }}"
+
+  tasks:
+
+     - debug:
+         msg: the value of foo.txt is {{ contents }} as seen today {{ lookup('pipe', 'date +"%Y-%m-%d"') }}

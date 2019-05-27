@@ -1,0 +1,8 @@
+---
+- hosts: frontends
+  serial: 3
+
+  tasks:
+
+  - name: take out of load balancer pool
+    local_action: command /bin/date

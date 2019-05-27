@@ -1,0 +1,10 @@
+---
+- hosts: frontends
+
+  tasks:
+
+  - name: upgrade web servers
+    command: /usr/bin/webserver_upgrade.sh
+    #command: /bin/echo
+    delegate_to: frt01.prod.com
+    run_once: true

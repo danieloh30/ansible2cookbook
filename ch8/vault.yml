@@ -1,0 +1,10 @@
+---
+- hosts: frontends
+  name: encrypt files
+  vars:
+    ip_address: 127.0.0.1
+    login_password: Password
+
+  tasks:
+  - name: task one
+    command: date

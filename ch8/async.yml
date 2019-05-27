@@ -1,0 +1,9 @@
+---
+- hosts: frontends
+
+  tasks:
+
+  - name: a long-running task
+    command: /bin/sleep 5
+    async: 30
+    poll: 3

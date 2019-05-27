@@ -1,0 +1,7 @@
+---
+- hosts: frontends
+  remote_user: doh
+  tasks:
+    - name: simple connection test
+      ping:
+      remote_user: doh

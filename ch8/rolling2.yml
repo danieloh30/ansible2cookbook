@@ -1,0 +1,7 @@
+---
+- hosts: frontends
+  name: rolling updates task
+  serial:
+  - "10%"
+  - "30%"
+  - "100%"
